@@ -648,7 +648,7 @@ section:nth-of-type(even) {
 
 /* Dark mode styles for event webinar section */
 [data-theme="dark"] #event-webinar {
-    background-color: var(--secondary-bg) !important;
+    background-color: var(--bg-color) !important;
     color: var(--text-color);
 }
 
@@ -659,14 +659,88 @@ section:nth-of-type(even) {
 
 [data-theme="dark"] #event-webinar .card {
     background-color: var(--card-bg) !important;
-    border-color: var(--border-color);
     color: var(--text-color);
 }
+
+/* Specific border colors for each card type in dark mode */
+[data-theme="dark"] #event-webinar .card.border-primary {
+    border: 2px solid #2563eb !important;
+}
+[data-theme="dark"] #event-webinar .card.border-warning {
+    border: 2px solid #eab308 !important;
+}
+[data-theme="dark"] #event-webinar .card.border-info {
+    border: 2px solid #0ea5e9 !important;
+}
+
+/* Badge colors for each type in dark mode */
+[data-theme="dark"] #event-webinar .badge.bg-primary {
+    background-color: #2563eb !important;
+    color: #fff !important;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 0.35em 1em;
+    font-size: 1rem;
+}
+[data-theme="dark"] #event-webinar .badge.bg-warning {
+    background-color: #eab308 !important;
+    color: #22223b !important;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 0.35em 1em;
+    font-size: 1rem;
+}
+[data-theme="dark"] #event-webinar .badge.bg-info {
+    background-color: #0ea5e9 !important;
+    color: #fff !important;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 0.35em 1em;
+    font-size: 1rem;
+}
+
 
 [data-theme="dark"] #event-webinar .card-title,
 [data-theme="dark"] #event-webinar .card-body,
 [data-theme="dark"] #event-webinar .list-unstyled li {
     color: var(--text-color);
+}
+
+[data-theme="dark"] #event-webinar .btn,
+[data-theme="dark"] #event-webinar .btn-primary {
+    background-color: var(--primary);
+    color: var(--text-light);
+    border-color: var(--primary);
+    border-radius: 50rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+/* Unified event webinar card layout for both themes */
+#event-webinar .card {
+    border-radius: var(--border-radius-default);
+    border-width: 2px;
+    box-shadow: var(--shadow-soft);
+    margin: 0 0.5rem 2rem 0.5rem;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+}
+
+[data-theme="dark"] #event-webinar .btn-primary:hover {
+    background-color: var(--accent);
+    color: var(--primary-dark);
+    border-color: var(--accent);
+}
+
+[data-theme="dark"] #event-webinar .btn:disabled,
+[data-theme="dark"] #event-webinar .btn-primary:disabled {
+    background-color: var(--border-color);
+    color: var(--meta-color);
+    border-color: var(--border-color);
 }
 
 /* Dark mode styles for tips karir section */
